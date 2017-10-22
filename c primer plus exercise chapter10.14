@@ -1,0 +1,102 @@
+#include <stdio.h> 
+int sum_array(int ar[][5], int num1);
+int sum_all(int ar[][5], int num2, int num22);
+int biggeat(int ar[][5],int num3, int num33);
+int print(void);
+int main(void)
+{
+	
+int sizes = 5;       
+int ar1[sizes];
+int ar2[sizes];
+int ar3[sizes];
+int ar[3][5];
+    
+    int i,j;
+    for (i = 0; i < 5; i++)
+     {
+	 scanf("%d",&ar1[i]);}
+	 for (i = 0; i < 5; i++)
+     {
+     scanf("%d", &ar2[i]);
+ }
+ for (i = 0; i < 5; i++)
+     {
+     scanf("%d", &ar3[i]);
+ }
+      for (i = 0; i < 3; i++)
+       for (j = 0; j < 5; j++)
+       { 
+       	   if ( i == 0)
+       	    {
+       	    	 ar[i][j] = ar1[j];
+			   }
+			  else if ( i == 1)
+       	       {
+       	    	 ar[i][j] = ar2[j];
+			   }
+		    else if( i == 2)
+       	    {
+       	    	 ar[i][j] = ar3[j];
+			   }      
+	   }
+	   for (i = 0; i < 3; i++)
+	    {
+	    	 sum_array(ar, i);
+		}
+		sum_all(ar,3,5);
+		biggeat(ar,3,5);
+		
+		
+		
+}
+  int sum_array(int ar[][5], int num1)
+    {
+    	 int total = 0;
+    	 int j;
+    	  for (j = 0; j < 5; j++)
+    	    {
+    	    	total += ar[num1][j];
+			}
+			printf("The %d array sum of it is %d.\n", num1 + 1, total);
+				}
+  int sum_all(int ar[][5],int num2,int num22)
+  {
+  	
+  	int i,j;
+  	int total;
+  	for (i = 0; i < 3; i++)
+  	 for (j = 0; j < 5; j++)
+	    total += ar[i][j];
+		printf("The all numbers of sum is %d.\n", total); 
+  }
+  
+  
+   int biggeat(int ar[][5],int num3, int num33)
+   {
+   	    int max = ar[0][0];
+   	    int i,j;
+   	    for (i = 0; i < 3; i++)
+   	     for (j = 0; j < 5;j++)
+   	        if (max < ar[i][j])
+   	           max = ar[i][j];
+   	           
+			  
+		printf("The biggest number in the fifth numbers is %d.\n",max); 
+   }
+  
+  
+  
+  
+   int biggeat(int ar[][5],int num3, int num33)
+   {
+   	    int max = ar[0][0];
+   	    int i,j;
+   	    for (i = 0; i < 3; i++)
+   	     for (j = 0; j < 5;j++)
+   	        if (max < ar[i][j])
+   	           max = ar[i][j];
+   	           
+			  
+		printf("The biggest number in the fifth numbers is %d.\n",max); 
+   }
